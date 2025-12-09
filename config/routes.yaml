@@ -1,0 +1,61 @@
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+#USUARIOS
+getUsuarios:
+    path: /usuarios
+    controller: App\Controller\UsuarioController::getUsuarios
+    methods: [GET]
+
+registro:
+    path: /usuario/registro
+    controller: App\Controller\UsuarioController::createUsuario
+    methods: [POST]
+
+updateUsuario:
+    path: /usuario/{id}/update
+    controller: App\Controller\UsuarioController::updateUsuario
+    methods: [PUT]
+
+updateConfig:
+    path: /usuario/{idUsuario}/config/update
+    controller: App\Controller\UsuarioController::updateConfig
+    methods: [PUT]
+
+#VEHICULOS
+getVehiculos:
+    path: /vehiculos
+    controller: App\Controller\VehiculosController::getVehiculos
+    methods: [GET]
+
+getVehiculosByUser:
+    path: /usuario/{userId}/vehiculos
+    controller: App\Controller\VehiculosController::getVehiculosByUser
+    methods: [GET]
+
+createVehiculo:
+    path: /vehiculo/create
+    controller: App\Controller\VehiculosController::createVehiculo
+    methods: [POST]
+
+deleteVehiculo:
+    path: /vehiculo/{id}
+    controller: App\Controller\VehiculosController::deleteVehiculos
+    methods: [DELETE]
+
+updateVehiculo:
+    path: /vehiculo/{id}
+    controller: App\Controller\VehiculosController::updateVehiculos
+    methods: [PUT]
+
+#DISPOSITIVOS
+createDispositivo:
+    path: /dispositivo/create
+    controller: App\Controller\DispositivosController::createDispositivo
+    methods: [POST]
+
+updateDispositivo:
+    path: /dispositivo/{id}
+    controller: App\Controller\DispositivosController::updateDispositivo
+    methods: [PUT]

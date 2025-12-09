@@ -1,0 +1,3 @@
+<?php //App%255CEntity%255CConfiguracionUsuario%2523getNotifItvDiasAntelacion
+
+return [PHP_INT_MAX, []];
