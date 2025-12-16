@@ -101,6 +101,7 @@ class Vehiculos
      * @var \Dispositivos
      *
      * @ORM\ManyToOne(targetEntity="Dispositivos")
+     * @Groups("vehiculos")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="dispositivo_id", referencedColumnName="id")
      * })

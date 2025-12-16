@@ -6,6 +6,7 @@ use App\Entity\Dispositivos;
 use App\Entity\Usuarios;
 use App\Entity\Vehiculos;
 use Doctrine\ORM\EntityManagerInterface;
+use http\Env\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -17,6 +18,18 @@ class VehiculosController extends AbstractController
     public function getVehiculos(EntityManagerInterface $entityManager, SerializerInterface $serializer){
         $vehiculos = $entityManager->getRepository(Vehiculos::class)->findAll();
         return new JsonResponse($serializer->serialize($vehiculos, 'json', ['groups' => 'vehiculos']), JsonResponse::HTTP_OK, [], true);
+    }
+
+    public function getVehiculoById(Request $request, SerializerInterface $serializer): JsonResponse
+    {
+        $id = $request->get('id');
+
+        $vehiculo = $this->getDoctrine()
+            ->getManager()->getRepository(Vehiculos::class)
+            ->findOneBy(['id' => $id]);
+
+        $vehiculo = $serializer->serialize($vehiculo, 'json', ['groups' => 'vehiculos']);
+        return new JsonResponse($vehiculo, JsonResponse::HTTP_OK, [], true);
     }
 
     public function getVehiculosByUser(Request $request, EntityManagerInterface $entityManager, SerializerInterface $serializer): JsonResponse{

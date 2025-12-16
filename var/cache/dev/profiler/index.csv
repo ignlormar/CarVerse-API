@@ -132,3 +132,15 @@ f517d5,172.19.0.1,GET,http://localhost:8082/dispositivo/1,1765283492,4826d8,500
 4826d8,172.19.0.1,PUT,http://localhost:8082/dispositivo/1,1765283493,,500
 52a8c6,172.19.0.1,GET,http://localhost:8082/dispositivo/1,1765283887,5a4dec,500
 5a4dec,172.19.0.1,PUT,http://localhost:8082/dispositivo/1,1765283888,,500
+a34db8,172.19.0.1,GET,http://localhost:8082/,1765870129,,200
+07a65a,172.19.0.1,GET,http://localhost:8082/favicon.ico,1765870145,3265b7,404
+3265b7,172.19.0.1,GET,http://localhost:8082/favicon.ico,1765870149,,404
+832d74,172.19.0.1,GET,http://localhost:8082/vehiculos,1765870179,bfe4ca,500
+bfe4ca,172.19.0.1,GET,http://localhost:8082/vehiculos,1765870183,,500
+4203de,172.19.0.1,GET,http://localhost:8082/vehiculos,1765870196,1f2855,500
+1f2855,172.19.0.1,GET,http://localhost:8082/vehiculos,1765870199,,500
+f9056a,172.19.0.1,GET,http://localhost:8082/,1765870246,,200
+f96a6a,172.19.0.1,GET,http://localhost:8082/vehiculos,1765870244,05bc71,500
+05bc71,172.19.0.1,GET,http://localhost:8082/vehiculos,1765870247,,500
+cb2740,172.19.0.1,GET,http://localhost:8082/vehiculos,1765870261,ea68d1,500
+ea68d1,172.19.0.1,GET,http://localhost:8082/vehiculos,1765870264,,500

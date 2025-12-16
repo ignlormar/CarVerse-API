@@ -53,7 +53,7 @@ class Dispositivos
      * @ORM\Column(name="fecha_alta", type="date", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
      * @Groups("dispositvos")
      */
-    private $fechaAlta = 'CURRENT_TIMESTAMP';
+    private $fechaAlta;
 
     public function getId(): int
     {

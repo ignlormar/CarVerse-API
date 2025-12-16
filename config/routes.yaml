@@ -8,6 +8,11 @@ getUsuarios:
     controller: App\Controller\UsuarioController::getUsuarios
     methods: [GET]
 
+getUsuariosById:
+    path: /usuario/{id}
+    controller: App\Controller\UsuarioController::getUsuarioById
+    methods: [GET]
+
 registro:
     path: /usuario/registro
     controller: App\Controller\UsuarioController::createUsuario
@@ -27,6 +32,11 @@ updateConfig:
 getVehiculos:
     path: /vehiculos
     controller: App\Controller\VehiculosController::getVehiculos
+    methods: [GET]
+
+getVehiculosById:
+    path: /vehiculo/{id}
+    controller: App\Controller\VehiculosController::getVehiculoById
     methods: [GET]
 
 getVehiculosByUser:
