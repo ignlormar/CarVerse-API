@@ -19,7 +19,7 @@ class Dispositivos
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
-     * @Groups("dispositvos")
+     * @Groups({"vehiculos","dispositivos"})
      */
     private $id;
 
@@ -27,7 +27,7 @@ class Dispositivos
      * @var string
      *
      * @ORM\Column(name="imei", type="string", length=50, nullable=false)
-     * @Groups("dispositvos")
+     * @Groups({"vehiculos","dispositivos"})
      */
     private $imei;
 
@@ -35,7 +35,7 @@ class Dispositivos
      * @var int
      *
      * @ORM\Column(name="flespi_id", type="bigint", nullable=false)
-     * @Groups("dispositvos")
+     * @Groups({"vehiculos","dispositivos"})
      */
     private $flespiId;
 
@@ -43,7 +43,7 @@ class Dispositivos
      * @var string|null
      *
      * @ORM\Column(name="descripcion", type="text", length=65535, nullable=true)
-     * @Groups("dispositvos")
+     * @Groups({"vehiculos","dispositivos"})
      */
     private $descripcion;
 
@@ -51,8 +51,8 @@ class Dispositivos
      * @var \DateTime
      *
      * @ORM\Column(name="fecha_alta", type="date", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
-     * @Groups("dispositvos")
-     */
+     * @Groups({"vehiculos","dispositivos"})
+    */
     private $fechaAlta;
 
     public function getId(): int

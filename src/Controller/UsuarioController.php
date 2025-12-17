@@ -29,7 +29,7 @@ class UsuarioController extends AbstractController
             ->findOneBy(['id' => $id]);
 
         $usuario = $serializer->serialize($usuario, 'json', ['groups' => 'usuarios']);
-        return new JsonResponse($serializer->serialize($usuario, 'json', ['groups' => 'usuarios']));
+        return new JsonResponse($usuario, JsonResponse::HTTP_OK, [], true);
     }
 
     public function createUsuario(Request $request, EntityManagerInterface $entityManager, SerializerInterface $serializer): JsonResponse
