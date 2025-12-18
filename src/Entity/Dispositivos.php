@@ -50,7 +50,7 @@ class Dispositivos
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fecha_alta", type="date", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
+     * @ORM\Column(name="fecha_alta", type="datetime", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
      * @Groups({"vehiculos","dispositivos"})
     */
     private $fechaAlta;
