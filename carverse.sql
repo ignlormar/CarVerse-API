@@ -21,7 +21,7 @@ CREATE TABLE dispositivos (
     imei VARCHAR(50) UNIQUE NOT NULL,
     flespi_id BIGINT UNIQUE NOT NULL,
     descripcion TEXT,
-    fecha_alta TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    fecha_alta DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Tabla vehiculos
